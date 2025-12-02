@@ -1,0 +1,21 @@
+{
+  "short_name": "ClubXero",
+  "name": "ClubXero - Local SEO & Google Maps Ranking",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#8FEC78",
+  "background_color": "#ffffff",
+  "description": "Rank your business on Google, Google Maps, and AI search engines. Expert local SEO services for Gujarat businesses."
+}

@@ -1,0 +1,13 @@
+/* ClubXero App Styles */
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+/* Ensure main content area takes available space */
+main {
+  flex: 1;
+}
