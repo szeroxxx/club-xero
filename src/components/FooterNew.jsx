@@ -5,9 +5,6 @@ import {
   Phone,
   MapPin,
   Instagram,
-  Linkedin,
-  Twitter,
-  Globe,
 } from "lucide-react";
 import {
   FooterBackgroundGradient,
@@ -50,8 +47,8 @@ function FooterNew() {
   const contactInfo = [
     {
       icon: <Mail size={18} className="text-[#218091]" />,
-      text: "sagargohil@proton.me",
-      href: "mailto:sagargohil@proton.me",
+      text: "theclubxero@gmail.com",
+      href: "mailto:theclubxero@gmail.com",
     },
     {
       icon: <Phone size={18} className="text-[#218091]" />,
@@ -66,10 +63,7 @@ function FooterNew() {
 
   // Social media icons
   const socialLinks = [
-    { icon: <Instagram size={20} />, label: "Instagram", href: "https://instagram.com/clubxero" },
-    { icon: <Linkedin size={20} />, label: "LinkedIn", href: "https://linkedin.com/company/clubxero" },
-    { icon: <Twitter size={20} />, label: "Twitter", href: "https://twitter.com/clubxero" },
-    { icon: <Globe size={20} />, label: "Website", href: "/" },
+    { icon: <Instagram size={20} />, label: "Instagram", href: "https://instagram.com/club_xero" },
   ];
 
   return (
@@ -78,10 +72,12 @@ function FooterNew() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8 lg:gap-16 pb-12">
           {/* Brand section */}
           <div className="flex flex-col space-y-4">
-            <Link to="/" className="flex items-center space-x-2 group">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#8FEC78] to-[#81DD67] flex items-center justify-center transition-transform group-hover:scale-110">
-                <span className="text-white text-xl font-bold">C</span>
-              </div>
+            <Link to="/" className="flex items-center space-x-3 group">
+              <img
+                src="/logo.svg"
+                alt="ClubXero"
+                className="h-10 w-10 object-contain transition-transform group-hover:scale-110"
+              />
               <span className="text-[#003720] text-3xl font-bold group-hover:text-[#218091] transition-colors">
                 ClubXero
               </span>
@@ -155,9 +151,9 @@ function FooterNew() {
         <hr className="border-t border-[#003720]/20 my-8" />
 
         {/* Footer bottom */}
-        <div className="flex flex-col md:flex-row justify-between items-center text-sm space-y-4 md:space-y-0">
+        <div className="flex flex-col md:flex-row justify-between items-center text-sm space-y-4 md:space-y-0 relative z-50">
           {/* Social icons */}
-          <div className="flex space-x-6 text-[#83928c]">
+          <div className="flex space-x-6 text-[#003720] bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg">
             {socialLinks.map(({ icon, label, href }) => (
               <a
                 key={label}
@@ -173,21 +169,21 @@ function FooterNew() {
           </div>
 
           {/* Copyright */}
-          <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
-            <p className="text-center md:text-left text-[#afb7b4]">
+          <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg">
+            <p className="text-center md:text-left text-[#003720] font-semibold">
               &copy; {new Date().getFullYear()} ClubXero. All rights reserved.
             </p>
-            <span className="hidden md:inline text-[#afb7b4]">•</span>
-            <p className="text-[#afb7b4] text-xs">
+            <span className="hidden md:inline text-[#83928c]">•</span>
+            <p className="text-[#003720] text-xs font-medium">
               Made with 💚 in Gujarat
             </p>
           </div>
         </div>
       </div>
 
-      {/* Text hover effect - hidden on mobile, visible on large screens */}
-      <div className="lg:flex hidden h-[30rem] -mt-52 -mb-36">
-        <TextHoverEffect text="CLUBXERO" className="z-50" />
+      {/* Text hover effect - responsive positioning */}
+      <div className="hidden xl:flex h-[25rem] -mt-48 -mb-32 pointer-events-none">
+        <TextHoverEffect text="CLUBXERO" className="z-10 opacity-30" />
       </div>
 
       <FooterBackgroundGradient />
